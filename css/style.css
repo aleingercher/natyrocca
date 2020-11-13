@@ -1,74 +1,70 @@
 /*paleta https://coolors.co/006d77-183939-83c5be-edf6f9-ffddd2-e29578 */
-
 /* GLOBAL */
+* {
+  padding: 0;
+  margin: 0; }
+
+html {
+  scroll-behavior: smooth; }
 
 body {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: rgb(255, 255, 255);
-}
+  background-color: white; }
 
 h1 {
-  margin: 0;
-}
+  margin: 0; }
 
 h2 {
   font-family: "Helvetica", sans-serif;
-  font-size: 3rem;
-}
+  font-size: 3rem; }
 
 a:hover {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 b {
-  font-weight: 600;
-}
+  font-weight: 600; }
 
 p {
-  padding: 0;
-}
+  padding: 0; }
 
 /* HOME */
-
 .landing {
-  height: 100vh;
-}
+  height: 100vh; }
 
 .logo {
-  color: rgb(184, 119, 119);
+  color: #b87777;
   font-family: 'Amatic', sans-serif;
   letter-spacing: 7px;
   text-align: center;
-  font-size: 4em;
-}
-
-.logo:hover {  
-  color: rgb(114, 59, 57);
-}
+  font-size: 4em; }
+  .logo:hover {
+    color: #723b39; }
 
 .ramita {
   animation: animacionRamita 2s;
-  animation-fill-mode: forwards;  
+  animation-fill-mode: forwards;
   margin-left: 20px;
-  max-height: 100px;
-}
-
+  max-height: 100px; }
 
 /* TARJETA */
-
 .card {
-  background: rgb(224, 215, 215);
-}
+  background: #e0d7d7;
+  border-radius: 1.6rem;
+  animation: apareceYSube 1s; }
 
 .linksInicio {
   height: 25vh;
   width: 100%;
   object-fit: cover;
-  padding: 3px;
-}
+  padding: 3px; }
+  .linksInicio:hover {
+    box-shadow: 1px 1px 10px black;
+    transform: scale(1.02);
+    transition: transform 0.5s;
+    z-index: 10; }
 
 .sobreimpreso {
   position: absolute;
@@ -77,30 +73,27 @@ p {
   font-size: 1.6rem;
   font-weight: 600;
   padding: 0 5px;
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
-.linksInicio:hover{
-  box-shadow: 1px 1px 10px black;
-  transform: scale(1.02);
-  transition: transform 0.5s;
-  z-index: 10;
-}
-
+  background-color: rgba(255, 255, 255, 0.4); }
 
 /* SEPARADOR */
-
 .citaBio {
   height: 15vh;
   background-color: rgba(0, 0, 0, 0.05);
-  font-size: 1.4rem;
-}
+  font-size: 1.4rem; }
 
 .cita {
   padding: 0;
   margin-bottom: 0;
+  font-style: oblique; }
+
+#tintes {
+  height: 100vh !important; }
+
+.destacado {
+  font-weight: 600;
+  color: grey;
   font-style: oblique;
-}
+  font-size: 1.3rem; }
 
 .imagen:hover {
   box-shadow: 1px 1px 10px black;
@@ -110,14 +103,18 @@ p {
 
 .imagen-conflictiva {
   height: 100%;
-  object-fit: cover;
-}
+  object-fit: cover; }
 
 /* KEYFRAMES */
-
-@keyframes animacionRamita {
+@keyframes "animacionRamita" {
   100% {
     transform: scale(1.2) translate(20px) rotate(25deg);
-    transition: transform 2s;
-  }
-}
+    transition: transform 2s; } }
+
+@keyframes "apareceYSube" {
+  0% {
+    opacity: 0;
+    transform: translateY(200px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
