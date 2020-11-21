@@ -12,10 +12,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: white; }
-
-h1 {
-  margin: 0; }
+  background-color: #f7f6e7; }
 
 h2 {
   font-family: "Helvetica", sans-serif;
@@ -27,16 +24,32 @@ a:hover {
 b {
   font-weight: 600; }
 
-p {
-  padding: 0; }
+.row {
+  margin-left: 0;
+  margin-right: 0; }
 
 /* HOME */
+.botonVolver {
+  z-index: 10000;
+  padding: 15px 70px;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid grey;
+  display: inline-block;
+  position: sticky;
+  top: 95%;
+  left: 45%;
+  text-decoration: none;
+  height: 100px;
+  color: black; }
+
 .landing {
   height: 100vh; }
 
 .logo {
   color: #b87777;
-  font-family: 'Amatic', sans-serif;
+  font-family: 'Amatic SC', sans-serif;
+  font-weight: 100;
   letter-spacing: 7px;
   text-align: center;
   font-size: 4em; }
@@ -51,9 +64,12 @@ p {
 
 /* TARJETA */
 .card {
-  background: #e0d7d7;
   border-radius: 1.6rem;
+  border: none;
   animation: apareceYSube 0.7s; }
+
+.fotoBio {
+  border-radius: 1.6rem; }
 
 .linksInicio {
   height: 25vh;
@@ -62,8 +78,9 @@ p {
   padding: 3px; }
   .linksInicio:hover {
     box-shadow: 1px 1px 10px black;
-    transform: scale(1.02);
-    transition: transform 0.5s;
+    animation: fotoCrece;
+    transition: 2s;
+    height: auto;
     z-index: 10; }
 
 .sobreimpreso {
@@ -86,24 +103,67 @@ p {
   margin-bottom: 0;
   font-style: oblique; }
 
+.titulo h2 {
+  font-size: 5rem;
+  font-weight: 100; }
+
+.texto {
+  line-height: 1.7rem;
+  font-size: 1.3rem;
+  align-items: center;
+  background-color: rgba(160, 63, 63, 0.1); }
+
+.tiraImagenes {
+  height: 20vh; }
+
+.contenedor {
+  display: flex;
+  align-items: center; }
+
+#fruto {
+  background: url("../img/fruto/fruto (4).jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white; }
+
 #tintes {
-  height: 100vh !important; }
+  background: url("../img/fondoTintes.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  height: 70vh;
+  color: white; }
 
 .destacado {
-  font-weight: 600;
-  color: grey;
+  font-weight: 400;
   font-style: oblique;
-  font-size: 1.3rem; }
+  font-size: 1.5rem;
+  z-index: 1000; }
 
-.imagen:hover {
-  box-shadow: 1px 1px 10px black;
-  transform: scale(1.02);
-  transition: all 0.3s;
-  z-index: 10; }
+.imagen {
+  object-fit: cover;
+  width: 100%;
+  max-height: 300px; }
+  .imagen:hover {
+    box-shadow: 1px 1px 10px black;
+    transform: scale(1.02);
+    transition: all 0.3s;
+    z-index: 10; }
 
 .imagen-conflictiva {
   height: 100%;
   object-fit: cover; }
+
+.whatsapp {
+  position: fixed;
+  bottom: 40px;
+  right: 30px; }
+  .whatsapp a {
+    text-decoration: none;
+    color: green; }
+    .whatsapp a:visited {
+      color: inherit; }
 
 /* KEYFRAMES */
 @keyframes "animacionRamita" {
@@ -118,3 +178,9 @@ p {
   100% {
     opacity: 1;
     transform: translateY(0px); } }
+
+@keyframes "fotoCrece" {
+  0% {
+    object-fit: cover; }
+  100% {
+    object-fit: scale-down; } }

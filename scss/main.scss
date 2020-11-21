@@ -1,4 +1,11 @@
 /*paleta https://coolors.co/006d77-183939-83c5be-edf6f9-ffddd2-e29578 */
+
+// VARIABLES PROPIAS
+
+$lista-colores: #555b6e, #89b0ae, #bee3db, #faf9f9, #ffd6ba;
+$fondo: #f7f6e7;
+
+
 /* GLOBAL */
 
 * {
@@ -10,17 +17,15 @@ html {
     scroll-behavior: smooth;
 }
 
-
 body {
 	box-sizing: border-box;
 	font-family: 'Montserrat', sans-serif;
 	margin: 0;
 	padding: 0;
-	background-color: rgb(255, 255, 255);
+	background-color: $fondo;
+	// background-color: list.index($lista-colores,2);
 }
-h1 {
-	margin: 0;
-}
+
 h2 {
 	font-family: "Helvetica", sans-serif;
 	font-size: 3rem;
@@ -33,17 +38,39 @@ a {
 b {
 	font-weight: 600;
 }
-p {
-	padding: 0;
+
+
+.row {
+	margin-left: 0;
+	margin-right: 0;
 }
 
 /* HOME */
+
+// Boton para volver al Inicio
+
+.botonVolver {
+	z-index: 10000;
+	padding: 15px 70px;
+	border-radius: 10px;
+	background-color: white;
+	border: 1px solid grey;
+	display: inline-block;
+	position: sticky;	
+	top: 95%;
+	left: 45%;
+	text-decoration: none;
+		height: 100px;
+		color: black;
+}
+
 .landing {
 	height: 100vh;
 }
 .logo {
 	color: rgb(184, 119, 119);
-	font-family: 'Amatic', sans-serif;
+	font-family: 'Amatic SC', sans-serif;
+	font-weight: 100;
 	letter-spacing: 7px;
 	text-align: center;
 	font-size: 4em;
@@ -60,11 +87,18 @@ p {
 
 /* TARJETA */
 .card {
-	background: rgb(224, 215, 215);
+	// background: rgb(224, 215, 215);
 	border-radius: 1.6rem;
+	border: none;
 	animation: apareceYSube 0.7s;
 
 }
+
+.fotoBio {	
+	border-radius: 1.6rem;
+}
+
+
 .linksInicio {
 	height: 25vh;
 	width: 100%;
@@ -72,8 +106,9 @@ p {
 	padding: 3px;
 	&:hover {
 		box-shadow: 1px 1px 10px black;
-		transform: scale(1.02);
-		transition: transform 0.5s;
+		animation: fotoCrece;
+		transition: 2s;
+		height: auto;
 		z-index: 10;
 	}
 }
@@ -99,25 +134,73 @@ p {
 	font-style: oblique;
 }
 
+// SECCIONES
+
+// global
+
+.titulo {
+
+	h2 {
+		font-size: 5rem;
+		font-weight: 100;
+	}
+}
+
+.texto {
+	line-height: 1.7rem;
+	font-size: 1.3rem;
+	align-items: center;
+	background-color: rgba($color: #a03f3f, $alpha: 0.1);
+}
+
+
+// Tira de imagenes por seccion
+.tiraImagenes {
+	height: 20vh;
+}
+
+.contenedor {	
+	display: flex;
+	align-items: center;
+}
+
+
+// fruto
+
+#fruto {
+	background: url("../img/fruto/fruto\ \(4\).jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	color: white;
+}
 
 // TINTES
 
 #tintes {
-    height: 100vh !important;
-    #contenidoTintes {
-        // height: 100vh !important;
-    }
+	background: url("../img/fondoTintes.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 70vh;
+	color: white;
+
+	
 }
 
 .destacado {
-    font-weight: 600;
-    color: grey;
+    font-weight: 400;
+    // color: grey;
     font-style: oblique;
-    font-size: 1.3rem;
+	font-size: 1.5rem;
+	z-index: 1000;
 }
 
 
 .imagen {
+	object-fit: cover;
+	width: 100%;
+	max-height: 300px;
 	&:hover {
 		box-shadow: 1px 1px 10px black;
 		transform: scale(1.02);
@@ -125,14 +208,33 @@ p {
 		z-index: 10;
 	}
 }
+
 .imagen-conflictiva {
 	height: 100%;
 	object-fit: cover;
 }
 
-.img-fluid {
-    // height: 100%;
+// WHATSAPP
+
+.whatsapp {
+	position: fixed;
+	bottom: 40px;
+	right: 30px;
+
+	a {
+		text-decoration: none;
+		color: green;
+
+		&:visited {
+			color: inherit;
+		}
+	}
 }
+
+
+
+
+
 
 
 /* KEYFRAMES */
@@ -153,5 +255,15 @@ p {
 	100% {
 		opacity: 1;
 		transform: translateY(0px);
+	}
+}
+
+@keyframes "fotoCrece" {
+	0% {
+		object-fit: cover;
+	}
+
+	100% {
+		object-fit: scale-down;
 	}
 }
