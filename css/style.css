@@ -2,7 +2,8 @@
 /* GLOBAL */
 * {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  box-sizing: border-box; }
 
 html {
   scroll-behavior: smooth; }
@@ -12,7 +13,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f7f6e7; }
+  background-color: white; }
 
 h2 {
   font-family: "Helvetica", sans-serif;
@@ -29,22 +30,12 @@ b {
   margin-right: 0; }
 
 /* HOME */
-.botonVolver {
-  z-index: 10000;
-  padding: 15px 70px;
-  border-radius: 10px;
-  background-color: white;
-  border: 1px solid grey;
-  display: inline-block;
-  position: sticky;
-  top: 95%;
-  left: 45%;
-  text-decoration: none;
-  height: 100px;
-  color: black; }
-
 .landing {
   height: 100vh; }
+
+.header {
+  height: 15vh;
+  z-index: 10; }
 
 .logo {
   color: #b87777;
@@ -64,39 +55,60 @@ b {
 
 /* TARJETA */
 .card {
-  border-radius: 1.6rem;
   border: none;
   animation: apareceYSube 0.7s; }
 
-.fotoBio {
-  border-radius: 1.6rem; }
+#containerLinks {
+  height: 80vh; }
+
+.links {
+  height: 33%; }
+  .links:hover .sobreimpreso {
+    opacity: 1;
+    transition: opacity .3s ease-in; }
 
 .linksInicio {
-  height: 25vh;
+  height: 100%;
   width: 100%;
   object-fit: cover;
   padding: 3px; }
-  .linksInicio:hover {
-    box-shadow: 1px 1px 10px black;
-    animation: fotoCrece;
-    transition: 2s;
-    height: auto;
-    z-index: 10; }
 
 .sobreimpreso {
   position: absolute;
+  opacity: 0;
   bottom: 0;
-  left: 5rem;
-  font-size: 1.6rem;
+  right: 5rem;
+  font-size: 2rem;
   font-weight: 600;
   padding: 0 5px;
-  background-color: rgba(255, 255, 255, 0.4); }
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2); }
+
+.botonVolver {
+  z-index: 10000;
+  padding: 15px 70px;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid grey;
+  display: inline-block;
+  position: sticky;
+  top: 95%;
+  left: 45%;
+  text-decoration: none;
+  height: 100px;
+  color: black;
+  opacity: 0.5; }
+  .botonVolver:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    transition: all .2s;
+    color: #612961; }
 
 /* SEPARADOR */
 .citaBio {
-  height: 15vh;
+  height: auto;
   background-color: rgba(0, 0, 0, 0.05);
-  font-size: 1.4rem; }
+  font-size: 1.2rem; }
 
 .cita {
   padding: 0;
@@ -109,30 +121,42 @@ b {
 
 .texto {
   line-height: 1.7rem;
-  font-size: 1.3rem;
   align-items: center;
-  background-color: rgba(160, 63, 63, 0.1); }
+  background-color: rgba(160, 63, 63, 0.1);
+  overflow: auto; }
 
-.tiraImagenes {
-  height: 20vh; }
+.carousel {
+  height: 30vh;
+  margin: 20px -10px; }
+
+.carousel-item img {
+  height: 30vh;
+  max-width: 33%;
+  object-fit: cover;
+  padding: 0;
+  margin: 0; }
 
 .contenedor {
   display: flex;
   align-items: center; }
+
+#linkFruto {
+  display: none;
+  position: absolute; }
 
 #fruto {
   background: url("../img/fruto/fruto (4).jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 70vh;
   color: white; }
 
 #tintes {
   background: url("../img/fondoTintes.jpg");
   background-attachment: fixed;
   background-size: cover;
-  height: 70vh;
+  height: 60vh;
   color: white; }
 
 .destacado {
@@ -155,15 +179,27 @@ b {
   height: 100%;
   object-fit: cover; }
 
+.redes {
+  height: 100%;
+  font-family: inherit;
+  font-family: 'Montserrat', sans-serif; }
+  .redes a {
+    color: #555b6e; }
+
 .whatsapp {
   position: fixed;
   bottom: 40px;
-  right: 30px; }
+  right: 30px;
+  z-index: 10000; }
   .whatsapp a {
     text-decoration: none;
-    color: green; }
+    color: #555b6e;
+    display: flex;
+    justify-content: center; }
     .whatsapp a:visited {
       color: inherit; }
+    .whatsapp a:hover {
+      color: darkolivegreen; }
 
 /* KEYFRAMES */
 @keyframes "animacionRamita" {
@@ -184,3 +220,15 @@ b {
     object-fit: cover; }
   100% {
     object-fit: scale-down; } }
+
+@media (max-width: 764px) {
+  .landing {
+    height: auto; }
+  .sobreimpreso {
+    opacity: 1; }
+  .carousel-item .sobra {
+    height: 0;
+    width: 0; }
+  .carousel-item img {
+    max-width: 49%;
+    overflow: hidden; } }
