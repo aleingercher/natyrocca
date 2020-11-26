@@ -86,16 +86,15 @@ b {
 
 .botonVolver {
   z-index: 10000;
-  padding: 15px 70px;
+  padding: 15px 5vw;
   border-radius: 10px;
   background-color: white;
   border: 1px solid grey;
   display: inline-block;
   position: sticky;
-  top: 95%;
-  left: 45%;
+  top: 94%;
+  left: 42%;
   text-decoration: none;
-  height: 100px;
   color: black;
   opacity: 0.5; }
   .botonVolver:hover {
@@ -180,11 +179,19 @@ b {
   object-fit: cover; }
 
 .redes {
-  height: 100%;
-  font-family: inherit;
-  font-family: 'Montserrat', sans-serif; }
+  height: 20vh; }
   .redes a {
-    color: #555b6e; }
+    color: #555b6e;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .redes a:hover {
+      color: #8992b1; }
+    .redes a p {
+      margin: 0;
+      padding-top: 20px; }
 
 .whatsapp {
   position: fixed;

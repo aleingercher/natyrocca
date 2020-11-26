@@ -85,15 +85,17 @@
 			</div>
 					
 		</div>
+		
+		<!-- BOTON VOLVER -->
+		<a class="botonVolver" href="#inicio">
+			<i class="fas fa-arrow-up" id="flechitaVolver"></i>
+		</a>
 
 		<div class="row justify-content-end text-center citaBio align-items-center ">
 			<p class="pr-3 cita">"Mi recorrido fue variado. Trabajé muchos años en publicidad y cine, en las áreas de producción y vestuario. Estudié <b>joyería y cincelado</b>. Hace seis años me interesé fuertemente en los textiles. Fue en este periodo cuando descubrí el mundo de los <b>tintes 	naturales</b> y quedé fascinada por sus colores. Es por eso que sigo estudiando, explorando y transmitiendo esta técnica ancestral. Sigo abriendo camino a lo nuevo, porque, como ya dije, mi <b>búsqueda</b> es <b>constante</b>. Actualmente llevo a cabo mi proyecto <br><b>FRUTO</b> y doy talleres de iniciación a los tintes naturales "</p>
 		</div>
 
-		<!-- BOTON VOLVER -->
-		<a class="botonVolver" href="#inicio">
-			<i class="fas fa-arrow-up" id="flechitaVolver"></i>
-		</a>
+		
 
 
 <!-- FRUTO -->
@@ -146,33 +148,34 @@
 			  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 			  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 			</ol>
+
 			<div class="carousel-inner">
 
-			  <div class="carousel-item active">
-				<img src="img/fruto/fruto (2).jpg" class="col-6 col-md-4" alt="..." data-toggle="modal" data-target="#modalCarousel">
-				<img src="img/fruto/fruto (3).jpg" class=" col-6 col-md-4" alt="...">
-				<img src="img/fruto/fruto (4).jpg" class="col-6 col-md-4 sobra" alt="...">				
-			  </div>
+				<div class="carousel-item active">
+					<img src="img/fruto/fruto (2).jpg" class="col-6 col-md-4" alt="..." data-toggle="modal" data-target="#modalCarousel" onClick="abrirFoto(this)">
+					<img src="img/fruto/fruto (3).jpg" class=" col-6 col-md-4" alt="..." data-toggle="modal" data-target="#modalCarousel"  onClick="abrirFoto(this)">
+					<img src="img/fruto/fruto (4).jpg" class="col-6 col-md-4 sobra" alt="..." data-toggle="modal" data-target="#modalCarousel" onClick="abrirFoto(this)">				
+					</div>
 
-			  <div class="carousel-item ">
-				<img src="img/fruto/fruto (2).jpg" class="col-6 col-md-4" alt="...">
-				<img src="img/fruto/fruto (3).jpg" class=" col-6 col-md-4" alt="...">
-				<img src="img/fruto/fruto (4).jpg" class="col-6 col-md-4 sobra" alt="...">
-				
-			  </div>
+					<div class="carousel-item ">
+					<img src="img/fruto/fruto (2).jpg" class="col-6 col-md-4" alt="..." data-toggle="modal" data-target="#modalCarousel" onClick="abrirFoto(this)">
+					<img src="img/fruto/fruto (3).jpg" class=" col-6 col-md-4" alt="..." data-toggle="modal" data-target="#modalCarousel" onClick="abrirFoto(this)">
+					<img src="img/fruto/fruto (4).jpg" class="col-6 col-md-4 sobra" alt="..." data-toggle="modal" data-target="#modalCarousel" onClick="abrirFoto(this)">
+					
+					</div>
 
-			  <div class="carousel-item ">
-				<img src="img/fruto/fruto (2).jpg" class="col-6 col-md-4" alt="...">
-				<img src="img/fruto/fruto (3).jpg" class=" col-6 col-md-4" alt="...">
-				<img src="img/fruto/fruto (4).jpg" class="col-6 col-md-4 sobra" alt="...">
-				
-			  </div>
+					<div class="carousel-item ">
+					<img src="img/fruto/fruto (2).jpg" class="col-6 col-md-4" alt="..." data-toggle="modal" data-target="#modalCarousel" onClick="abrirFoto(this)">
+					<img src="img/fruto/fruto (3).jpg" class=" col-6 col-md-4" alt="..." data-toggle="modal" data-target="#modalCarousel" onClick="abrirFoto(this)">
+					<img src="img/fruto/fruto (4).jpg" class="col-6 col-md-4 sobra" alt="..." data-toggle="modal" data-target="#modalCarousel" onClick="abrirFoto(this)">
+					
+				</div>
 
-			<div class="modal fade" id="modalCarousel">
-				<div class="modal-dialog modal-lg modal-dialog-centered">
-					<img src="img/fruto/fruto (3).jpg" class="img-fluid" alt="...">
-				</div>				
-			</div>
+				<div class="modal fade" id="modalCarousel">
+					<div class="modal-dialog modal-lg modal-dialog-centered">
+						<img id="imagenModal" src="img/fruto/fruto (3).jpg" class="img-fluid" alt="...">
+					</div>				
+				</div>
 
 			</div>
 
@@ -196,7 +199,7 @@
 					
 		<div class="row contenedor" id="tintes">
 
-			<div class="col-12 col-md-6 row gallery">
+			<div class="col-12 col-md-6 row">
 				<!-- <div class="col-12 col-md-6 p-0 my-sm-2 my-md-0">
 					<img class="img-fluid imagen" src="img/tintes/1.jpg" alt="olla con tela y tinte">
 				</div>
@@ -223,7 +226,8 @@
 				</p>
 			</div>
 
-		</div>	
+		</div>
+
 
 		<!-- TEXTO BROCHES
 		
@@ -231,49 +235,46 @@
 		-->
 
 <!-- FOOTER -->
-		<footer class="">			
-			<div class="container-fluid">  
-			  	<div class="row">
-					<div class="col-6 d-flex redes">
-		
-						<a class="m-3">
-							<i class="fab fa-facebook-f fa-lg fa-2x" title="mi facebook"></i>
-						</a>
-						
-						<a class="m-3" href="https://www.instagram.com/unfruto">
-							<i class="fab fa-instagram fa-lg fa-2x" title="insta de FRUTO"></i>
-							<p>mi instagram</p>
-						</a>
-						
-						<a class="m-3" href="https://www.instagram.com/soynatyrocca ">
-							<i class="fab fa-instagram fa-lg fa-2x" title="mi instagram"></i>
-						</a>
-						
-					</div>
+ 
+		<footer class="row">
 
-					<div class="col"></div>
+			<div class="col"></div>
+
+			<div class="col-12 col-md-5 d-flex redes">
+
+				<a class="col-2 m-3" href="https://www.facebook.com/UNFRUTO/">
+					<i class="fab fa-facebook-f fa-lg " title="mi facebook"></i>
+				</a>
 				
-	
-				</div>
-			</div>		  
+				<a class="col-2 m-3" href="https://www.instagram.com/unfruto">
+					<i class="fab fa-instagram fa-lg " title="insta de FRUTO"></i>
+				</a>
+				
+				<a class="col-2 m-3" href="https://www.instagram.com/soynatyrocca ">
+					<i class="fab fa-instagram fa-lg " title="mi instagram"></i>
+				</a>
+
+				<a  class="col-2" href="https://api.whatsapp.com/send?phone=5491152617145">
+					<i class="fab fa-whatsapp fa-lg"></i>
+				</a>
+				
+			</div>	
+
 		</footer>
 
 		<!-- whatsapp que te persigue -->
-		
+<!-- 		
 		<div class="whatsapp">
-			<a href="https://api.whatsapp.com/send?phone=5491152617145">
-				<i class="fab fa-whatsapp fa-3x"></i>
-			</a>
-		</div>
-
-
+			
+		</div> -->
 	</div>
 
-	<!-- Footer -->
-
-  <!-- Footer -->
-
-	
+	<!-- script para carrousel -->
+ 	 <script>
+		function abrirFoto(foto){
+			document.getElementById('imagenModal').src = foto.src;
+		}
+	</script>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
