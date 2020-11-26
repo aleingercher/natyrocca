@@ -172,11 +172,12 @@ b {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  height: 70vh;
+  min-height: 70vh;
   color: white; }
   #fruto a {
     text-decoration: none;
-    color: inherit; }
+    color: inherit;
+    height: 100%; }
 
 #tintes {
   background: url("../img/fondoTintes.jpg");
@@ -266,7 +267,13 @@ b {
   .landing {
     height: auto; }
   .sobreimpreso {
-    opacity: 1; }
+    opacity: 1;
+    right: 0;
+    left: 0; }
+  .sobreimpresoNegro {
+    opacity: 1;
+    right: 0;
+    left: 0; }
   .texto {
     background-color: rgba(78, 75, 75, 0.5);
     text-align: center !important; }
