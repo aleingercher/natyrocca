@@ -81,6 +81,20 @@ b {
 	// border-radius: 1.6rem;
 	border: none;
 	animation: apareceYSube 0.7s;
+
+	
+
+	p {
+		font-size: 1.3rem;
+		color: #555b6e;
+		padding: 0 15px;
+
+		&::first-letter {
+			font-family: 'Amatic SC', sans-serif;
+			font-size: 4rem;
+			letter-spacing: 10px;
+		}
+	}
 }
 
 #containerLinks {
@@ -90,10 +104,14 @@ b {
 .links {
 	height: 33%;
 
-	&:hover .sobreimpreso{
+	&:hover > .sobreimpreso {
 		opacity: 1;
 		transition: opacity .3s ease-in;
+	}
 
+	&:hover > .sobreimpresoNegro {
+		opacity: 1;
+		transition: opacity .3s ease-in;
 	}
 }
 
@@ -112,16 +130,17 @@ b {
 }
 
 // version con fondo blanco y texto negro
-// .sobreimpreso {
-// 	position: absolute;
-// 	opacity: 0;
-// 	bottom: 0;
-// 	left: 5rem;
-// 	font-size: 1.6rem;
-// 	font-weight: 600;
-// 	padding: 0 5px;
-// 	background-color: rgba(255, 255, 255, 0.4);
-// }
+.sobreimpresoNegro {
+	position: absolute;
+	opacity: 0;
+	bottom: 0;
+	right: 5rem;
+	font-size: 2rem;
+	font-weight: 600;
+	padding: 0 5px;
+	color: rgb(59, 59, 59);
+	background-color: rgba($color: #ffffff, $alpha: .2);
+}
 
 .sobreimpreso {
 	position: absolute;
@@ -159,21 +178,26 @@ b {
 	}
 }
 
-/* SEPARADOR */
-.citaBio {
-	height: auto;
-	background-color: rgba(0, 0, 0, 0.05);
+/* BIO */
+.bio {
+	background-color: rgba(0, 0, 0, 0.15);
 	font-size: 1.2rem;
+	padding: 15px;
+	margin-bottom: 30px;
 }
-.cita {
-	padding: 0;
-	margin-bottom: 0;
-	font-style: oblique;
+/* 
+
+
+/* SEPARADOR */
+
+.separador {
+	height: 10vh;
 }
+
 
 // SECCIONES
 
-// global
+// general
 
 .titulo {
 
@@ -186,9 +210,8 @@ b {
 .texto {
 	line-height: 1.7rem;
 	// font-size: 1.3rem;
-	align-items: center;
+	align-items: right;
 	background-color: rgba($color: #a03f3f, $alpha: 0.1);
-	overflow: auto;
 }
 
 
@@ -217,7 +240,8 @@ b {
 }
 
 
-// fruto
+// FRUTO
+
 #linkFruto {
 	display: none;
 	position: absolute;
@@ -230,6 +254,11 @@ b {
 	background-position: center;
 	height: 70vh;
 	color: white;
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
 }
 
 
@@ -239,8 +268,14 @@ b {
 	background: url("../img/fondoTintes.jpg");
 	background-attachment: fixed;
 	background-size: cover;
-	height: 60vh;
+	min-height: 60vh;
 	color: white;
+	justify-content: flex-end;
+	padding: 30px;
+
+	.texto {
+		text-align: right;
+	}
 
 	
 }
@@ -254,22 +289,50 @@ b {
 }
 
 
-.imagen {
-	object-fit: cover;
-	width: 100%;
-	max-height: 300px;
-	&:hover {
-		box-shadow: 1px 1px 10px black;
-		transform: scale(1.02);
-		transition: all 0.3s;
-		z-index: 10;
+// .imagen {
+// 	object-fit: cover;
+// 	width: 100%;
+// 	max-height: 300px;
+// 	&:hover {
+// 		box-shadow: 1px 1px 10px black;
+// 		transform: scale(1.02);
+// 		transition: all 0.3s;
+// 		z-index: 10;
+// 	}
+// }
+
+// .imagen-conflictiva {
+// 	height: 100%;
+// 	object-fit: cover;
+// }
+
+
+// BROCHES
+
+#broches {
+	background: url("../img/links/broches-link.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: bottom;
+	min-height: 60vh;
+	color: white;	
+	padding: 30px;
+	
+	.texto {		
+		background-color: none !important;
+
+		p {
+			overflow: hidden;
+		}
+
 	}
 }
 
-.imagen-conflictiva {
-	height: 100%;
-	object-fit: cover;
+#carouselBroches {
+	width: 80vw;
+	margin: 5vh auto;
 }
+
 
 // FOOTER
 
@@ -359,13 +422,18 @@ b {
 
 // QUERIES
 
-@media (max-width: 764px) {
+@media (max-width: 844px) {
 	.landing {
 		height: auto;
 	}
 
 	.sobreimpreso {
 		opacity: 1;
+	}
+
+	.texto {
+		background-color: rgba($color: #4e4b4b, $alpha: 0.5);
+		text-align: center !important;
 	}
 	
 	.carousel-item {

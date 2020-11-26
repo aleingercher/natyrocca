@@ -57,13 +57,24 @@ b {
 .card {
   border: none;
   animation: apareceYSube 0.7s; }
+  .card p {
+    font-size: 1.3rem;
+    color: #555b6e;
+    padding: 0 15px; }
+    .card p::first-letter {
+      font-family: 'Amatic SC', sans-serif;
+      font-size: 4rem;
+      letter-spacing: 10px; }
 
 #containerLinks {
   height: 80vh; }
 
 .links {
   height: 33%; }
-  .links:hover .sobreimpreso {
+  .links:hover > .sobreimpreso {
+    opacity: 1;
+    transition: opacity .3s ease-in; }
+  .links:hover > .sobreimpresoNegro {
     opacity: 1;
     transition: opacity .3s ease-in; }
 
@@ -72,6 +83,17 @@ b {
   width: 100%;
   object-fit: cover;
   padding: 3px; }
+
+.sobreimpresoNegro {
+  position: absolute;
+  opacity: 0;
+  bottom: 0;
+  right: 5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0 5px;
+  color: #3b3b3b;
+  background-color: rgba(255, 255, 255, 0.2); }
 
 .sobreimpreso {
   position: absolute;
@@ -103,16 +125,19 @@ b {
     transition: all .2s;
     color: #612961; }
 
-/* SEPARADOR */
-.citaBio {
-  height: auto;
-  background-color: rgba(0, 0, 0, 0.05);
-  font-size: 1.2rem; }
+/* BIO */
+.bio {
+  background-color: rgba(0, 0, 0, 0.15);
+  font-size: 1.2rem;
+  padding: 15px;
+  margin-bottom: 30px; }
 
-.cita {
-  padding: 0;
-  margin-bottom: 0;
-  font-style: oblique; }
+/* 
+
+
+/* SEPARADOR */
+.separador {
+  height: 10vh; }
 
 .titulo h2 {
   font-size: 5rem;
@@ -120,9 +145,8 @@ b {
 
 .texto {
   line-height: 1.7rem;
-  align-items: center;
-  background-color: rgba(160, 63, 63, 0.1);
-  overflow: auto; }
+  align-items: right;
+  background-color: rgba(160, 63, 63, 0.1); }
 
 .carousel {
   height: 30vh;
@@ -150,13 +174,20 @@ b {
   background-position: center;
   height: 70vh;
   color: white; }
+  #fruto a {
+    text-decoration: none;
+    color: inherit; }
 
 #tintes {
   background: url("../img/fondoTintes.jpg");
   background-attachment: fixed;
   background-size: cover;
-  height: 60vh;
-  color: white; }
+  min-height: 60vh;
+  color: white;
+  justify-content: flex-end;
+  padding: 30px; }
+  #tintes .texto {
+    text-align: right; }
 
 .destacado {
   font-weight: 400;
@@ -164,19 +195,22 @@ b {
   font-size: 1.5rem;
   z-index: 1000; }
 
-.imagen {
-  object-fit: cover;
-  width: 100%;
-  max-height: 300px; }
-  .imagen:hover {
-    box-shadow: 1px 1px 10px black;
-    transform: scale(1.02);
-    transition: all 0.3s;
-    z-index: 10; }
+#broches {
+  background: url("../img/links/broches-link.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: bottom;
+  min-height: 60vh;
+  color: white;
+  padding: 30px; }
+  #broches .texto {
+    background-color: none !important; }
+    #broches .texto p {
+      overflow: hidden; }
 
-.imagen-conflictiva {
-  height: 100%;
-  object-fit: cover; }
+#carouselBroches {
+  width: 80vw;
+  margin: 5vh auto; }
 
 .redes {
   height: 20vh; }
@@ -228,11 +262,14 @@ b {
   100% {
     object-fit: scale-down; } }
 
-@media (max-width: 764px) {
+@media (max-width: 844px) {
   .landing {
     height: auto; }
   .sobreimpreso {
     opacity: 1; }
+  .texto {
+    background-color: rgba(78, 75, 75, 0.5);
+    text-align: center !important; }
   .carousel-item .sobra {
     height: 0;
     width: 0; }
