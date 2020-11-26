@@ -84,17 +84,18 @@ b {
   object-fit: cover;
   padding: 3px; }
 
-.sobreimpresoNegro {
-  position: absolute;
-  opacity: 0;
-  bottom: 0;
-  right: 5rem;
-  font-size: 2rem;
-  font-weight: 600;
-  padding: 0 5px;
-  color: #3b3b3b;
-  background-color: rgba(255, 255, 255, 0.2); }
-
+/* .sobreimpresoNegro {
+	position: absolute;
+	opacity: 0;
+	bottom: 0;
+	right: 5rem;
+	font-size: 2rem;
+	font-weight: 600;
+	padding: 0 5px;
+	color: rgb(59, 59, 59);
+	background-color: rgba($color: #ffffff, $alpha: .2);
+}
+ */
 .sobreimpreso {
   position: absolute;
   opacity: 0;
@@ -158,6 +159,12 @@ b {
   object-fit: cover;
   padding: 0;
   margin: 0; }
+
+.carousel-indicators li {
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+  margin: 0 15px; }
 
 .contenedor {
   display: flex;
@@ -270,10 +277,11 @@ b {
     opacity: 1;
     right: 0;
     left: 0; }
-  .sobreimpresoNegro {
-    opacity: 1;
-    right: 0;
-    left: 0; }
+  /* .sobreimpresoNegro {
+		opacity: 1;
+		right: 0;
+		left: 0;
+	} */
   .texto {
     background-color: rgba(78, 75, 75, 0.5);
     text-align: center !important; }

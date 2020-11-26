@@ -130,7 +130,7 @@ b {
 }
 
 // version con fondo blanco y texto negro
-.sobreimpresoNegro {
+/* .sobreimpresoNegro {
 	position: absolute;
 	opacity: 0;
 	bottom: 0;
@@ -141,7 +141,7 @@ b {
 	color: rgb(59, 59, 59);
 	background-color: rgba($color: #ffffff, $alpha: .2);
 }
-
+ */
 .sobreimpreso {
 	position: absolute;
 	opacity: 0;
@@ -232,6 +232,14 @@ b {
 		padding: 0;
 		margin: 0;
 	}
+}
+
+
+.carousel-indicators li {
+	border-radius: 50%;
+	width: 13px;
+	height: 13px;
+	margin: 0 15px;
 }
 
 .contenedor {	
@@ -428,9 +436,6 @@ b {
 		height: auto;
 	}
 
-	.links {
-
-	}
 
 	.sobreimpreso {
 		opacity: 1;
@@ -438,11 +443,11 @@ b {
 		left: 0;
 	}
 
-	.sobreimpresoNegro {
+	/* .sobreimpresoNegro {
 		opacity: 1;
 		right: 0;
 		left: 0;
-	}
+	} */
 
 	.texto {
 		background-color: rgba($color: #4e4b4b, $alpha: 0.5);
@@ -458,9 +463,7 @@ b {
 
 		img {
 			max-width: 49%;
-			overflow: hidden;
-
-			
+			overflow: hidden;			
 		}
 	}
 
