@@ -277,6 +277,8 @@ b {
     opacity: 1;
     right: 0;
     left: 0; }
+  .bio {
+    padding: 0; }
   /* .sobreimpresoNegro {
 		opacity: 1;
 		right: 0;
