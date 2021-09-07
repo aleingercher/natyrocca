@@ -5,7 +5,6 @@
 $lista-colores: #555b6e, #89b0ae, #bee3db, #faf9f9, #ffd6ba;
 $fondo: #f7f6e7;
 
-
 /* GLOBAL */
 
 * {
@@ -389,7 +388,7 @@ b {
 
 
 /* KEYFRAMES */
-@keyframes "animacionRamita" {
+@keyframes animacionRamita {
 	100% {
 		transform: scale(1.2) translate(20px) rotate(25deg);
 		transition: 2s;
@@ -397,7 +396,7 @@ b {
 }
 
 
-@keyframes "apareceYSube" {
+@keyframes apareceYSube {
 	0% {
 		opacity: 0;
 		transform: translateY(60px);
@@ -409,7 +408,7 @@ b {
 	}
 }
 
-@keyframes "fotoCrece" {
+@keyframes fotoCrece {
 	0% {
 		object-fit: cover;
 	}
